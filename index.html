@@ -282,12 +282,18 @@
     --shadow:0 10px 34px rgba(0,0,0,.5);
     --red:#e6304a;
   }
-  html,body{background:#050405;}
-  .bg{background:#050405;}
-  .orb.a,.orb.b{display:none;}
+  html,body{background:#070406;}
+  .bg{background:
+      radial-gradient(60% 44% at 18% 10%, rgba(74,16,28,.85), transparent 62%),
+      radial-gradient(55% 40% at 88% 22%, rgba(44,10,20,.8), transparent 62%),
+      radial-gradient(72% 52% at 80% 90%, rgba(58,14,26,.85), transparent 62%),
+      radial-gradient(60% 44% at 8% 84%, rgba(22,8,14,.9), transparent 62%),
+      linear-gradient(180deg,#0c0709,#080506);}
+  .orb.a{display:block;background:radial-gradient(circle, rgba(230,48,74,.4), transparent 70%);}
+  .orb.b{display:block;background:radial-gradient(circle, rgba(120,18,32,.42), transparent 70%);}
   /* 메인 사진 오버레이(그라데이션) 제거 */
   .cover .photo-frame::after{display:none;}
-  .glass::before{display:none;}
+  .glass::before{display:block;background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,0));}
   .glass{box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.12);}
   .glass.dark{box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.08);}
 
@@ -322,6 +328,29 @@
   /* 기타 가독성 */
   .foot{color:rgba(243,236,237,.5);}
   .grid img.ph{border-color:rgba(255,255,255,.18);box-shadow:0 4px 16px rgba(0,0,0,.4);}
+
+  /* RED 버전: 폰트 작게 */
+  .nameplate .en{font-size:29px;}
+  .nameplate .dt{font-size:13px;}
+  .greeting .poem{font-size:14.5px;line-height:2.4;}
+  .family .child{font-size:18px;}
+  .family .parents{font-size:12.5px;}
+  .datesec .big{font-size:44px;}
+  .datesec .dow{font-size:16px;}
+  .datesec .time{font-size:13.5px;}
+  .datesec .cal td{font-size:14.5px;}
+  .location .hall{font-size:18px;}
+  .location .floor{font-size:13px;}
+  .location .addr{font-size:12.5px;}
+  .ct-name{font-size:15px;}
+  .account .lead{font-size:13px;}
+  .acc-num{font-size:13.5px;}
+  .label{font-size:12.5px;}
+  .ix{font-size:12.5px;}
+  .outro .thanks{font-size:18px;}
+  .outro .kr{font-size:13px;}
+  .cd-msg{font-size:12.5px;}
+  .cd-num{font-size:26px;}
 </style>
 </head>
 <body>
