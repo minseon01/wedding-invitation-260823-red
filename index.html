@@ -273,24 +273,23 @@
 
   /* ===================== DARK · RED 로맨틱 테마 ===================== */
   :root{
-    --glass:rgba(26,20,22,.52);
-    --glass-2:rgba(40,30,33,.62);
-    --glass-line:rgba(255,255,255,.16);
-    --glass-dark:rgba(9,6,8,.62);
-    --ink:#f3eced;
-    --ink-soft:#cdbfc2;
+    --glass:rgba(20,14,16,.4);
+    --glass-2:rgba(32,24,26,.5);
+    --glass-line:rgba(255,255,255,.18);
+    --glass-dark:rgba(8,5,7,.52);
+    --ink:#f5efef;
+    --ink-soft:#d6cacd;
     --shadow:0 10px 34px rgba(0,0,0,.5);
     --red:#e6304a;
   }
   html,body{background:#070406;}
-  .bg{background:
-      radial-gradient(60% 44% at 18% 10%, rgba(74,16,28,.85), transparent 62%),
-      radial-gradient(55% 40% at 88% 22%, rgba(44,10,20,.8), transparent 62%),
-      radial-gradient(72% 52% at 80% 90%, rgba(58,14,26,.85), transparent 62%),
-      radial-gradient(60% 44% at 8% 84%, rgba(22,8,14,.9), transparent 62%),
-      linear-gradient(180deg,#0c0709,#080506);}
-  .orb.a{display:block;background:radial-gradient(circle, rgba(230,48,74,.4), transparent 70%);}
-  .orb.b{display:block;background:radial-gradient(circle, rgba(120,18,32,.42), transparent 70%);}
+  .bg{background:#070406;}
+  .bg img{position:absolute;inset:-8%;width:116%;height:116%;object-fit:cover;
+    filter:blur(28px) brightness(.5) saturate(1.15);}
+  .bg::after{content:"";position:absolute;inset:0;background:
+      radial-gradient(60% 50% at 50% 28%, rgba(130,22,38,.28), transparent 70%),
+      linear-gradient(180deg, rgba(8,4,6,.45), rgba(8,4,6,.8));}
+  .orb.a,.orb.b{display:none;}
   /* 메인 사진 오버레이(그라데이션) 제거 */
   .cover .photo-frame::after{display:none;}
   .glass::before{display:block;background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,0));}
@@ -354,8 +353,8 @@
 </style>
 </head>
 <body>
-  <!-- 고정 배경 (그라데이션) -->
-  <div class="bg"></div>
+  <!-- 고정 배경 (사진 블러) -->
+  <div class="bg"><img src="images/main.jpg" alt="" /></div>
   <div class="orb a"></div>
   <div class="orb b"></div>
 
